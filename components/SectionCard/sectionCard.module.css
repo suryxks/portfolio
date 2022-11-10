@@ -1,0 +1,39 @@
+.projects{
+    background-color: var(--projects); 
+}
+.blogs{
+    background-color: var(--blogs); 
+}
+.resume{
+    background-color: var(--resume);
+}
+.section_title{
+    width: fit-content;
+}
+.section_link{
+    flex-grow: 1;
+}
+.section_Card{
+    height: 200px;
+    min-width: 330px;
+    color: var(--white);
+    margin: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+.icon{
+    font-weight: 700;
+    color: var(--white);
+    font-size: 2.5rem;
+}
+.resume_icon{
+    font-size: 3rem;
+}
+.sectionDetails_wrapper{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+}
