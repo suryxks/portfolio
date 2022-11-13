@@ -1,35 +1,43 @@
-import axios from "axios";
-import { SpinnerInfinity } from "spinners-react";
+import Image from "next/image";
+import { getProjectDetails } from "../../services/getProjectsDetails";
+import styles from "../../styles/Projects.module.css";
+import utilStyles from "../../styles/utils.module.css"
+import { AppBar ,NavBar} from "../../components";
+import Link from "next/link";
 export async function getStaticProps() {
-    const uri = process.env.GITHUB_REPO_FETCH_URI;
-    const response = await axios.get("https://gh-pinned-repos.egoist.dev/?username=suryxks");
-
-
-  console.log(response.data);
+  const projectDetails = getProjectDetails();
   return {
     props: {
-      repos: [...response.data],
+      projects: [...projectDetails],
     },
   };
 }
-export default function Projects({ repos }) {
+export default function Projects({ projects }) {
   return (
-    <div>
-      {!repos ? (
-        <SpinnerInfinity
-          size={50}
-          thickness={100}
-          speed={100}
-          color="rgba(0, 0, 0, 1)"
-          secondaryColor="rgba(20, 110, 180, 1)"
-        />
-      ) : (
-        <div>
-          {repos.map((repo) => (
-            <div key={repo.repo}>{repo.repo}</div>
-          ))}
-        </div>
-      )}
+    <div className={styles.page_wrapper}>
+      <AppBar/>
+      <div  className={styles.projects_container}>
+        {projects.map((project) => (
+          <div key={project.name} className={styles.projectWrapper}>
+            <Image
+              src={project.img}
+              alt={project.name}
+              width={270}
+              height={180}
+              className={styles.image}
+            />
+            <div className={styles.details}>
+              <h3>{project.name}</h3>
+              <p className={styles.description}>{project.description}</p>
+              <Link href={`/projects/${project.name}`} className={styles.link_btn}>Learn more</Link>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className={styles.sidebar}>
+        <h3 className={`${utilStyles.text_md} ${styles.sidebar_content}`}>{`Projects  (${projects.length})` }</h3>
+      </div>
+      <NavBar/>
     </div>
   );
 }

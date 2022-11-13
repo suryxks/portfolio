@@ -6,11 +6,11 @@
   height: 380px;
 }
 .content{
-  width: 80%;
-  border-radius: 4px;
+  width: 70%;
+  border-radius: 8px;
   margin: auto;
   position: relative;
-  top:-100px;
+  top:-200px;
   background-color: var(--white);
   box-shadow: 0px 2.0px 4.0px hsl(0deg 0% 0% / 0.38);
   padding: 1rem;
@@ -20,5 +20,9 @@
   margin: 0  auto;
   gap:1rem;
   flex-wrap: wrap;
-  width: fit-content;
+}
+@media (max-width:550px){
+  .content{
+    width:90%;
+  }
 }

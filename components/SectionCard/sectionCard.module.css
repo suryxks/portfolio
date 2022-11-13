@@ -9,20 +9,23 @@
 }
 .section_title{
     width: fit-content;
+   
 }
 .section_link{
     flex-grow: 1;
+    flex-basis: 280px;
 }
 .section_Card{
     height: 200px;
-    min-width: 330px;
+    min-width: min(280px,80%);
     color: var(--white);
-    margin: 10px;
+    position: relative;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap:1rem;
+    overflow: hidden;
 }
 .icon{
     font-weight: 700;
@@ -36,4 +39,18 @@
     display: flex;
     justify-content: center;
     gap:1rem;
+    
+    position:absolute;
+}
+.img{
+    border-radius: 4px;
+    transform:rotate(25deg);
+    position: absolute;
+    bottom: -2rem;
+    right: -1rem;
+}
+@media(max-width:550px) {
+    .img{
+        bottom:-1.7rem;
+    }
 }

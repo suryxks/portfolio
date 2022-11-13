@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./sectionCard.module.css";
 import utilStyles from "../../styles/utils.module.css";
 import { RiLightbulbFlashLine } from "react-icons/ri";
@@ -30,7 +31,28 @@ export const SectionCard = ({ section }) => {
           <h1 className={`${utilStyles.text_lg} ${styles.section_title}`}>
             {section}
           </h1>
+         
         </div>
+          {section == "Projects" ? (
+            <Image src='/projects.jpg'
+            width={100}
+            height={100}
+            alt={section}
+            className={styles.img} />
+          ) : section == "Blogs" ? (
+            <Image src='/blogs.jpg'
+            width={100}
+            height={100}
+            alt={section}
+            className={styles.img} />
+          ) : (
+            <Image src='/resume.jpg'
+            width={100}
+            height={100}
+            alt={section}
+            className={styles.img} />
+          )}
+        
       </div>
     </Link>
   );

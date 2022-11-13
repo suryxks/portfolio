@@ -4,8 +4,15 @@ html,
   --cta:#146EB4;
   --white:#FFFFFF;
   --projects:#14AC9D;
-  --blogs:#16B31A;
-  --resume:#279BF2;
+  --blogs:#E01E5B;
+  --resume:#7358FF;
+  --grey-bg:#F2F2F2;
+  --cta-hover:#177ccb;
+  --icon-color:#4D4D4D;
+  --blue-bg:#E7F0F7;
+  --grey-txt:#757575;
+  --grey-border:#e6e6e6;
+  --search-bg:#D4D4D8;
 }
 *, *::before, *::after {
   box-sizing: border-box;
