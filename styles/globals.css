@@ -13,6 +13,7 @@ html,
   --grey-txt:#757575;
   --grey-border:#e6e6e6;
   --search-bg:#D4D4D8;
+  --resume-section-title:#546D8F;
 }
 *, *::before, *::after {
   box-sizing: border-box;

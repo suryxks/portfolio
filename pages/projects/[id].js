@@ -5,6 +5,7 @@ import { AppBar, NavBar } from "../../components";
 import { HiArrowLeft } from "react-icons/Hi";
 import { getProjectPaths, getProject } from "../../services/getProjectsDetails";
 import styles from "../../styles/project.module.css";
+import utilStyles from "../../styles/utils.module.css";
 export async function getStaticPaths() {
   const paths = getProjectPaths();
   return {
@@ -14,7 +15,6 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps({ params }) {
   const projectDetails = getProject(params.id);
-  console.log(projectDetails[0]);
   return {
     props: {
       project: projectDetails[0],
@@ -42,13 +42,19 @@ export default function Project({ project }) {
           <div>
             <h2>{name}</h2>
             <h3 className={styles.description}>{description}</h3>
-            <ol className={styles.list}>
+            <ul className={styles.list}>
               {details?.map((detail) => (
                 <li key={detail} className={styles.detail}>
                   {detail}
                 </li>
               ))}
-            </ol>
+            </ul>
+            <div className={styles.tech}>
+              <span className={utilStyles.text_bold}>Tech Stack:</span>
+              {techStack.map((tech) => (
+                <span key={tech}>{` ${tech},`}</span>
+              ))}
+            </div>
           </div>
           <div className={styles.linksContainer}>
             <a href={githubUrl} className={styles.btn_outline}>
@@ -60,8 +66,8 @@ export default function Project({ project }) {
             </a>
           </div>
         </div>
-          </div>
-          <NavBar/>
+      </div>
+      <NavBar />
     </div>
   );
 }

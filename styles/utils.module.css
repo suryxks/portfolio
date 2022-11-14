@@ -2,11 +2,16 @@
     font-weight: 700;
     font-size: 2rem;
 }
-
+.text_bold{
+    font-weight: 700;
+}
 .text_md {
     font-weight: 500;
 }
 
 .text_sm {
     font-weight: 400;
+}
+.link{
+    color: var(--cta);
 }

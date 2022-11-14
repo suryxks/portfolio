@@ -72,3 +72,41 @@ export const projects = [{
 
 
 ]
+export const blogs = [
+    {
+        title: 'Understanding Scope in Javascript',
+        url: 'https://suryxks.hashnode.dev/understanding-scope-in-javascript',
+        description: 'Scope in js ,If you like to code in JavaScript, understanding the scope of variables is a must. So before understaning what is scope lets see some',
+        date: 'Jun 16, 2022',
+        readTime:'4 min',
+    },
+    {
+        title: 'Playing With DOM using Javascript',
+        url: 'https://suryxks.hashnode.dev/playing-with-dom-using-javascript',
+        description: 'What do you mean by DOM ? The Document object model(DOM) is an application programming interface (API) for HTML , The browser parses the content into',
+        date: 'Aug 15, 2021',
+        readTime:'2 min',
+    }
+    ,
+    {
+        title: 'Semantic HTML',
+        url: 'https://suryxks.hashnode.dev/semantic-html',
+        description: 'Semantic HTML What is Semantics? In Programming world semantics refers to the meaning of a piece of code. Why do we need semantic HTML ? semantic',
+        date: 'Aug 14, 2021',
+        readTime:'2 min',
+    }
+]
+export const socailProfiles = {
+    'github':{
+        name: 'Github',
+        url: 'https://github.com/suryxks'
+    },
+    'portfolio':{
+        name: 'Portfolio',
+        url:'https://suryaks.netlify.app/'
+    },
+    'linkedin':{
+        name: 'linkedin',
+        url:'https://www.linkedin.com/in/surya-k-s-376b681b5/'
+    },
+}
