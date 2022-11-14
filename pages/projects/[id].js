@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { AppBar, NavBar } from "../../components";
-import { HiArrowLeft } from "react-icons/Hi";
+import { HiArrowLeft } from "react-icons/hi";
 import { getProjectPaths, getProject } from "../../services/getProjectsDetails";
 import styles from "../../styles/project.module.css";
 import utilStyles from "../../styles/utils.module.css";
