@@ -52,6 +52,7 @@
     border: 1px solid var(--grey-border);
     grid-area:content ;
     overflow-y: scroll;
+
 }
 .page_wrapper{
   display: grid;
@@ -125,5 +126,8 @@ display: none;
       }
       .projectWrapper{
         margin: auto;
+    }
+    .projects_container{
+        padding-bottom: 2rem;
     }
 }
