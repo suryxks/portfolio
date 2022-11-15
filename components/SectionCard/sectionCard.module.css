@@ -49,6 +49,11 @@
     bottom: -2rem;
     right: -1rem;
 }
+.description{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left:5px;
+  }
 @media(max-width:550px) {
     .img{
         bottom:-2rem;

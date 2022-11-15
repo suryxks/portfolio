@@ -18,7 +18,6 @@ export const SectionCard = ({ section }) => {
             : styles.resume
         } ${styles.section_Card}`}
       >
-        {" "}
         <div className={styles.sectionDetails_wrapper}>
           {section == "Projects" ? (
             <RiLightbulbFlashLine className={styles.icon} />
@@ -27,32 +26,59 @@ export const SectionCard = ({ section }) => {
           ) : (
             <HiAcademicCap className={`${styles.icon} ${styles.resume_icon}`} />
           )}
-
           <h1 className={`${utilStyles.text_lg} ${styles.section_title}`}>
             {section}
           </h1>
-         
         </div>
-          {section == "Projects" ? (
-            <Image src='/projects.jpg'
+        {section == "Projects" ? (
+          <Image
+            src="/projects.jpg"
             width={100}
             height={100}
             alt={section}
-            className={styles.img} />
-          ) : section == "Blogs" ? (
-            <Image src='/blogs.jpg'
+            className={styles.img}
+          />
+        ) : section == "Blogs" ? (
+          <Image
+            src="/blogs.jpg"
             width={100}
             height={100}
             alt={section}
-            className={styles.img} />
-          ) : (
-            <Image src='/resume.jpg'
+            className={styles.img}
+          />
+        ) : (
+          <Image
+            src="/resume.jpg"
             width={100}
             height={100}
             alt={section}
-            className={styles.img} />
-          )}
-        
+            className={styles.img}
+          />
+        )}
+      </div>
+      <div>
+        {section == "Projects" ? (
+          <div className={styles.description}>
+            <h3> Projects </h3>
+            <p>
+              I like to learn by building and breaking stuff, This is a
+              collection of few projects that i have built.
+            </p>
+          </div>
+        ) : section == "Blogs" ? (
+          <div className={styles.description}>
+            <h3> Blogs </h3>
+            <p>
+              I Share My learnings through blogs, This is a collection of Blogs I
+              have published
+            </p>
+          </div>
+        ) : (
+          <div className={styles.description}>
+            <h3> Resume </h3>
+            <p> View and Download Resume </p>
+          </div>
+        )}
       </div>
     </Link>
   );

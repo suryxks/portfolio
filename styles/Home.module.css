@@ -49,5 +49,10 @@
 @media (max-width:550px) {
   .content {
     width: 90%;
+    top:-90px;
+  }
+  .blue_box {
+    background-color: var(--cta);
+    height: 220px;
   }
 }
