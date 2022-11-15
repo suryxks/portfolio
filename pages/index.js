@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import utilStyles from '../styles/utils.module.css'
 import { AppHeader, SectionCard } from "../components";
-import { motion } from "framer-motion";
+import { Footer } from "../components";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -21,7 +21,7 @@ export default function Home() {
       <div className={styles.content}>
         <div className={styles.about}>
           <h1>Hi <span className={styles.wave}>👋</span>,<span className={utilStyles.link}>{`I'm Surya`}</span></h1>
-          <p>{"I'm a Frontend Engineer who loves to build beautiful User Interfaces with good UX"}</p>
+          <p className={styles.aboutMe}>{"I'm a Frontend Engineer who loves to build beautiful User Interfaces with good UX"}</p>
         </div>
         <div className={styles.section_container}>
           <SectionCard section="Projects" />
@@ -29,6 +29,7 @@ export default function Home() {
           <SectionCard section="Resume" />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

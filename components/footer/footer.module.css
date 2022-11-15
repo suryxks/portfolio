@@ -1,0 +1,28 @@
+.footer{
+    background-color: var(--dark-bg);
+    color: var(--white);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.container>h5{
+    font-weight: 500;
+    font-size: 16px;
+}
+.icon{
+    font-size: 1.5rem;
+    color:var(--cta);
+    background-color: var(--white);
+    padding: 0;
+    margin: 1rem;
+    border-radius: 4px
+}

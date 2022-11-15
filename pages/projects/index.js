@@ -18,7 +18,7 @@ export default function Projects({ projects }) {
       <AppBar/>
       <div  className={styles.projects_container}>
         {projects.map((project) => (
-          <div key={project.name} className={styles.projectWrapper}>
+          <Link href={`/projects/${project.name}`} key={project.name} className={styles.projectWrapper}>
             <Image
               src={project.img}
               alt={project.name}
@@ -31,7 +31,7 @@ export default function Projects({ projects }) {
               <p className={styles.description}>{project.description}</p>
               <Link href={`/projects/${project.name}`} className={styles.link_btn}>Learn more</Link>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <div className={styles.sidebar}>

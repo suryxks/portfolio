@@ -72,6 +72,7 @@
     width: 100%;
     line-height: 24px;
     max-width: 215px;
+    font-weight: 500;
 }
 .btn_outline:hover{
 background-color: var(--blue-bg);
@@ -90,6 +91,7 @@ background-color: var(--blue-bg);
     width: 100%;
     line-height: 24px;
     max-width: 215px;
+    font-weight: 500;
 }
 .btn_filled:hover{
 background-color: var(--cta-hover);

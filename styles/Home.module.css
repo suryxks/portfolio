@@ -45,7 +45,12 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
-
+.aboutMe{
+  font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    color: var(--home-txt);
+  }
 @media (max-width:550px) {
   .content {
     width: 90%;

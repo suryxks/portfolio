@@ -5,9 +5,12 @@
     padding: 1rem 2rem;
     justify-content: center;
     width: min(605px,100vw);
+    overflow: hidden;
 }
 .projectWrapper:hover{
     background-color: var(--grey-bg);
+    transform: scale(1.05);
+    transition: transform 300ms;
 }
 .image{
     border-radius: 6px;
@@ -23,8 +26,10 @@
 .tab{
     display: flex;
     align-items: center;
-    color: var(--icon-color);
-    gap:0px;
+    color: var(--home-txt);
+    gap:5px;
+    font-weight: 500;
+    font-size: 14px;
 }
 .icon{
     font-size: 1.5rem;
@@ -89,6 +94,7 @@ display: none;
     margin: auto 0 10px auto;
     border-radius: 4px;
     padding:0.3rem;
+    font-weight: 500;
 }
 .link_btn:hover{
  background-color: var(--blue-bg);

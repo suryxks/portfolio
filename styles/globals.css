@@ -14,6 +14,8 @@ html,
   --grey-border:#e6e6e6;
   --search-bg:#D4D4D8;
   --resume-section-title:#546D8F;
+  --dark-bg:#1A181E;
+  --home-txt:#4d4d4d;
 }
 *, *::before, *::after {
   box-sizing: border-box;
