@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import utilStyles from '../styles/utils.module.css'
 import { AppHeader, SectionCard } from "../components";
 import { motion } from "framer-motion";
 export default function Home() {
@@ -18,7 +19,10 @@ export default function Home() {
       <AppHeader />
       <div className={styles.blue_box}></div>
       <div className={styles.content}>
-        
+        <div className={styles.about}>
+          <h1>Hi <span className={styles.wave}>👋</span>,<span className={utilStyles.link}>{`I'm Surya`}</span></h1>
+          <p>{"I'm a Frontend Engineer who loves to build beautiful User Interfaces with good UX"}</p>
+        </div>
         <div className={styles.section_container}>
           <SectionCard section="Projects" />
           <SectionCard section="Blogs" />

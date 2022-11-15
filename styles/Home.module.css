@@ -1,28 +1,53 @@
-.container {
-  padding: 0;
+@keyframes wave {
+  from {
+    transform: rotate(-10deg);
+  }
+
+  to {
+    transform: rotate(30deg);
+  }
+
 }
-.blue_box{
+
+.container {
+  padding: 0rem;
+}
+
+.blue_box {
   background-color: var(--cta);
   height: 380px;
 }
-.content{
+
+.wave {
+  display: inline-block;
+  animation: wave 1000ms infinite alternate ease-in-out;
+  transform-origin: 75% 80%;
+}
+
+.about {
+  margin-bottom: 1rem;
+}
+
+.content {
   width: 70%;
   border-radius: 8px;
   margin: auto;
   position: relative;
-  top:-200px;
+  top: -200px;
   background-color: var(--white);
   box-shadow: 0px 2.0px 4.0px hsl(0deg 0% 0% / 0.38);
-  padding: 1rem;
+  padding: 2rem;
 }
-.section_container{
+
+.section_container {
   display: flex;
-  margin: 0  auto;
-  gap:1rem;
+  margin: 0 auto;
+  gap: 1rem;
   flex-wrap: wrap;
 }
-@media (max-width:550px){
-  .content{
-    width:90%;
+
+@media (max-width:550px) {
+  .content {
+    width: 90%;
   }
 }
