@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Surya Dukaan Portfolio</title>
+        <title>Surya - dev</title>
         <meta
           name="surya Dukaan Portfolio"
           content="made by surya for applying for dukaan Frontend internship"
