@@ -18,7 +18,6 @@ export default function Projects({ projects }) {
       <AppBar />
       <div className={styles.projects_container}>
         {projects.map((project) => {
-          console.log(project);
           return (
             <Link
               href={`/projects/${project.name}`}
