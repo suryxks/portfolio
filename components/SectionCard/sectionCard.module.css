@@ -15,6 +15,10 @@
     flex-grow: 1;
     flex-basis: 280px;
 }
+.section_link:hover{
+   transform: scale(0.95);
+   transition: transform 500ms ease-in-out;
+}
 .section_Card{
     height: 200px;
     min-width: min(280px,80%);
@@ -26,6 +30,10 @@
     align-items: center;
     gap:1rem;
     overflow: hidden;
+}
+.section_Card:hover >.img{
+    transform:rotate(-50deg);
+    transition: transform 500ms;
 }
 .icon{
     font-weight: 700;
