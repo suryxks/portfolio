@@ -14,10 +14,10 @@
 .section_link{
     flex-grow: 1;
     flex-basis: 280px;
+    transition: transform 500ms ;
 }
 .section_link:hover{
-   transform: scale(0.95);
-   transition: transform 500ms ease-in-out;
+   transform: scale(1.05);
 }
 .section_Card{
     height: 200px;
