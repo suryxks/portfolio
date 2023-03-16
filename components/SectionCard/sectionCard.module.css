@@ -18,6 +18,8 @@
 }
 .section_link:hover{
    transform: scale(0.95);
+   /* transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); */
+   
 }
 .section_Card{
     height: 200px;
@@ -33,7 +35,7 @@
 }
 .section_Card:hover >.img{
     transform:rotate(-50deg);
-    transition: transform 500ms;
+ 
 }
 .icon{
     font-weight: 700;
@@ -56,6 +58,7 @@
     position: absolute;
     bottom: -2rem;
     right: -1rem;
+    transition: transform 500ms;
 }
 .description{
     margin-top: 10px;
