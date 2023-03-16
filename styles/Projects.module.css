@@ -6,11 +6,12 @@
     justify-content: center;
     width: min(605px,100vw);
     overflow: hidden;
+    transition: transform 300ms;
 }
 .projectWrapper:hover{
     background-color: var(--grey-bg);
     transform: scale(1.05);
-    transition: transform 300ms;
+    
 }
 .image{
     border-radius: 6px;
