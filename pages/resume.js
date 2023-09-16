@@ -13,8 +13,8 @@ export default function Resume() {
   const profiles = getProfiles();
   const { github, portfolio, linkedin } = profiles;
   const fileUrl =
-    "https://drive.google.com/u/0/uc?id=1mw6j58PCbSJXzLPOX0BeyLrE0TE-b0Ru&export=download";
-  const fileName = "surya_frontend_dev.pdf";
+    "https://drive.google.com/file/d/1T-YbqVQlbI2Nr7yAAHzE2QxFe5tuuI-X";
+  const fileName = "surya_Resume.pdf";
   return (
     <div className={styles.page_wrapper}>
       <AppBar />
