@@ -11,6 +11,32 @@ export default function Resume() {
   projects = projects.filter((project) => project.name !== "Lift-Simulation");
   const blogs = getBlogs();
   const profiles = getProfiles();
+  const experience = [
+    {
+      company: "Rocketlane",
+      role: "Software Engineer Intern",
+      websiteUrl:"https://www.rocketlane.com/",
+      techStack: [
+        "Typescript",
+        "Javascript",
+        "React",
+        "styled-components",
+        "Playwright",
+        "Redux",
+        "React-query",
+      ],
+      details: [
+        "Worked on Performance Improvements Which reduced the page load time to less than 5s which was taking 10-20s earlier",
+        "Wrote Codemod to convert imports of Carbon Icons from named imports to default imports, resulting in a significant 5.5MB reduction in the application’s overall bundle size",
+        "Implemented Project Summary Card feature which gives an overview of the entire Project and helps compose Emails by using Rich text editor (CkEditor) and React",
+        "Created scripts to monitor Frontend CPU usage in the browser using Puppeteer, automatically triggering a CI failure if CPU usageexceeds 10%",
+        "Wrote e2e tests using Playwright",
+        "Implemented Grid View In Project Files",
+        "Implemented Full Screen view using Fullscreen API",
+        "Debugged and Worked on bugs Related to IndexedDB",
+      ],
+    },
+  ];
   const { github, portfolio, linkedin } = profiles;
   const fileUrl =
     "https://drive.google.com/file/d/1T-YbqVQlbI2Nr7yAAHzE2QxFe5tuuI-X";
@@ -70,6 +96,44 @@ export default function Resume() {
                 Javascript,HTML,CSS,React.js,styled components,Redux,
                 jest,Typescript,React Testing library
               </p>
+            </div>
+          </section>
+          <section>
+            <h4 className={styles.section_title}>EXPERIENCE</h4>
+            <hr />
+            <div className={styles.projects}>
+              {experience.map((item) => {
+                const {
+                  role,
+                  techStack,
+                  details,
+                  company,
+                  websiteUrl
+                } = item;
+                return (
+                  <div key={company} className={styles.project_details}>
+                    <a
+                      href={websiteUrl}
+                      className={`${utilStyles.link} ${utilStyles.text_bold}`}
+                    >
+                      {role}-{company}
+                    </a>
+                    <ul className={styles.list_container}>
+                      {details.map((detail) => (
+                        <li key={detail}>{detail}</li>
+                      ))}
+                      <li>
+                        <span className={utilStyles.text_bold}>
+                          Tech Stack:
+                        </span>
+                        {techStack.map((tech) => (
+                          <span key={tech}>{`${tech}, `}</span>
+                        ))}
+                      </li>
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
           </section>
 
@@ -157,8 +221,8 @@ export default function Resume() {
             Download Resume
           </a>
         </div>
-          </div>
-          <NavBar/>
+      </div>
+      <NavBar />
     </div>
   );
 }
